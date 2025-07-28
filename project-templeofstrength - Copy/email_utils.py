@@ -17,7 +17,7 @@ def send_payment_email(recipient_email, name, program_name, program_price):
     try:
         print("Starting email send process...")
         
-        if program_price > 0:
+        if int(program_price) > 0:
             # Payment email (as before)
             subject = f"Welcome to {program_name} at Temple of Strength!"
             body = f"""

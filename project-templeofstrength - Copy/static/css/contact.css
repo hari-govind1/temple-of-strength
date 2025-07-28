@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    background: url('/static/images/index-background.png') center center / cover fixed no-repeat;
+    line-height: 1.6;
+    padding-top: 80px; /* Space for fixed nav */
+}
+
+/* Blurred background overlay (commented out, as in your index.css) */
+/*body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/index-background.png') center center / cover no-repeat;
+    background-attachment: fixed;
+    filter: blur(8px);
+    z-index: -1;
+}*/
+
+/* Navigation Bar (identical to index) */
+.navbar {
+    background: #1C2526;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #E63946;
+}
+
+/* Hero Section (similar to index, with fade-in) */
+.hero {
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #FFD700; /* Gold accent */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Form (card-style with transparency, matching testimonials) */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    animation: fadeInSection 1s ease-in;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff56c;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #E63946;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #C1121F;
+    transform: scale(1.05);
+}
+
+/* Contact Details Section */
+.contact-details {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+/* Social Links */
+.social-links {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    color: #FFFFFF;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #E63946;
+}
+
+/* FAQ Section */
+.faq {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.faq p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1C2526;
+}
+
+/* Animations (from your index) */
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+}

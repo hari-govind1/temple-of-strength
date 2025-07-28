@@ -1,0 +1,247 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    background: #000000;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #1C2526;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #E63946;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('/static/images/index-background.jpg') center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.btn {
+    background: #E63946;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+    animation: fadeScale 1s ease-out 1.2s forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.btn:hover {
+    background: #C1121F;
+    transform: scale(1.05);
+}
+
+@keyframes fadeScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === Circular Layout === */
+.circle-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #e76f00;
+    font-weight: bold;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Outer circle item */
+.circle-item {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: #600d0d;
+    color: white;
+    border-radius: 50%;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content inside each circle */
+.circle-content {
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle-item:hover .circle-content {
+    transform: scale(1.1);
+}
+
+/* Circular positions */
+.item1 {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.item2 {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+.item3 {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.item4 {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+/* Circle text */
+.circle-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.circle-content p {
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .navbar ul {
+        gap: 1rem;
+    }
+
+    .navbar .logo img {
+        height: 40px;
+    }
+
+    .circle-container {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .circle-item {
+        position: static;
+        margin: 1rem auto;
+    }
+}

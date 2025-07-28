@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temple of Strength Programs - Compare and choose your path to ancestral strength and healing.">
+    <meta name="keywords" content="vyayam challenge, beginner program, intermediate training, dharmic fitness">
+    <meta name="author" content="Temple of Strength">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Temple of Strength Programs | Best Gym in [Your City]">
+    <meta property="og:description" content="Compare our programs for strength, healing, and Dharmic vitality.">
+    <meta property="og:image" content="/static/images/gym-hero.jpg">
+    <meta property="og:url" content="https://templeofstrength.in/programs">
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Temple of Strength Programs",
+        "provider": {
+            "@type": "Organization",
+            "name": "Temple of Strength"
+        },
+        "url": "https://templeofstrength.in/programs"
+    }
+    </script>
+    <title>Programs & Pricing | Temple of Strength</title>
+    <!-- Google Fonts: Montserrat for headings, Open Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS for Programs Page -->
+    <link rel="stylesheet" href="/static/css/plans.css">
+</head>
+<body>
+    <!-- Navigation (consistent with other pages) -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/images/logo.png" alt="Temple of Strength Logo">
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Plans & Pricing</a></li>
+            <!-- <li><a href="/classes">Classes</a></li> -->
+            <!-- <li><a href="/trainers">Trainers</a></li>-->
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Programs Comparison Section -->
+    <section class="comparison-section">
+        <h1>Choose Your Strength Path</h1>
+        <p>Compare our programs to find the perfect fit for your journey to ancestral strength, healing, and Dharmic vitality.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>41-Day Vyayam Challenge</th>
+                    <th>Beginner Path (6 Months)</th>
+                    <th>Intermediate Training</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Price</td>
+                    <td>₹9,999</td>
+                    <td>₹30,000</td>
+                    <td>₹60,000</td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td>41 Days</td>
+                    <td>6 Months</td>
+                    <td>6 Months</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>Daily practice & habits reset | Perfect for beginners</td>
+                    <td>Personal training + rituals + lifestyle healing</td>
+                    <td>For those with 3+ months of movement experience | Deep Vyayam, Silambam, Kalari, Kumbhaks, Diet Sadhana</td>
+                </tr>
+                <tr>
+                    <td>What's Included</td>
+                    <td>41 Days of Guided Practice, Ancient Strength Protocols, Habit Tracking, Diet Guidance, Weekly Letters, Bonus Mantra Pack & Journal</td>
+                    <td>6 Months 1-on-1 Training, Tailored Movement Plan, Lifestyle Practices, Traditional Tools Guidance, Weekly Check-ins, Private Group Access</td>
+                    <td>96 Sessions, Weekly Mentorship, Equipment Progression, Inner Warrior Journal, Holistic Ritual Enhancements</td>
+                </tr>
+                <tr>
+                    <td>Who It's For</td>
+                    <td>Those feeling lazy, stiff, weak; wanting to break toxic habits and start a strength journey</td>
+                    <td>Vegetarians with lifestyle diseases ready to heal fatigue, stiffness, anxiety through Dharmic practices</td>
+                    <td>Those who have tasted the path and want deeper mind-body connection, warrior's mental edge, stronger physique</td>
+                </tr>
+                <tr>
+                    <td>Key Benefits</td>
+                    <td>More energy, better digestion, sharper focus, decreased pain, rekindled faith in body and Dharma</td>
+                    <td>Wake up energized, eliminate stiffness, move with ease, build inner fire, feel strong and alive</td>
+                    <td>Faster movement, deeper focus, increased strength, warrior reflexes, balanced and fulfilling lifestyle</td>
+                </tr>
+                <tr>
+                    <td>Testimonials</td>
+                    <td>"Day 14 — I woke up at 5 AM on my own." "My cravings vanished." "This is a way of life."</td>
+                    <td>"My pain disappeared within 30 days." "Feel like a strong Indian man." "Movement is addictive."</td>
+                    <td>"Real strength in posture, words, decisions." "Gada work changed my willpower." "Sharper, calmer, centered."</td>
+                </tr>
+                <tr>
+                    <td>Eligibility/Support</td>
+                    <td>Cohort-based, WhatsApp + Videos + Tracker, Community + Weekly Check-ins</td>
+                    <td>Online Personal Coaching, Flexible Timings, Tools Purchase Guide</td>
+                    <td>Must complete Beginner or equivalent, 2–4 sessions/week + lifestyle practice</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td><a href="#" class="btn" onclick="openModal('41-Day Vyayam Challenge', 9999)">Join Now – ₹9,999</a></td>
+                    <td><a href="#" class="btn" onclick="openModal('Beginner Path', 30000)">Join Now – ₹30,000</a></td>
+                    <td><a href="#" class="btn" onclick="openModal('Intermediate Training', 60000)">Apply Now – ₹60,000</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Popup Modal for Name and Email -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Join Program</h2>
+            <form id="paymentForm" method="POST" action="/send-payment-email">
+                <input type="hidden" id="programName" name="programName">
+                <input type="hidden" id="programPrice" name="programPrice">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Popup Modal -->
+    <div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSuccessModal()">&times;</span>
+        <div class="success-tick">&#10004;</div>  <!-- Green tick -->
+        <h2>Email Sent Successfully!</h2>
+        <p>We've sent payment details to your email. Check your inbox and spam folder.</p>
+        <button onclick="closeSuccessModal()" class="btn">OK</button>
+    </div>
+</div>
+</div>
+
+
+
+
+    <!-- JavaScript for Modals -->
+    <script>
+        // Payment Modal
+        function openModal(program, price) {
+            document.getElementById('programName').value = program;
+            document.getElementById('programPrice').value = price;
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        // Success Modal
+        function openSuccessModal() {
+            document.getElementById('successModal').style.display = 'block';
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        // Check for success flag on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('success') === 'true') {
+                openSuccessModal();
+            }
+        });
+
+        // Close modals if clicking outside
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('paymentModal')) {
+                closeModal();
+            } else if (event.target === document.getElementById('successModal')) {
+                closeSuccessModal();
+            }
+        };
+    </script>
+
+    <!-- JavaScript for Success Modal -->
+    <script>
+    function openSuccessModal() {
+        document.getElementById('successModal').style.display = 'block';
+        console.log('Popup opened successfully!');  // Debug log
+        // Auto-close after 5 seconds (optional)
+        setTimeout(closeSuccessModal, 5000);
+    }
+
+    function closeSuccessModal() {
+        document.getElementById('successModal').style.display = 'none';
+    }
+
+    // Check for success param on page load
+
+    window.onload = function() {
+        console.log('Page loaded - checking for success param');
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            console.log('Success param FOUND - opening popup');  // New log for confirmation
+            openSuccessModal();
+        } else {
+            console.log('No success param found in URL');
+        }
+    };
+
+    // Close if clicking outside
+    window.onclick = function(event) {
+        if (event.target === document.getElementById('successModal')) {
+            closeSuccessModal();
+        }
+    };
+</script>
+
+<footer class="footer">
+        <p>© 2025 Temple of Strength. All rights reserved.</p>
+</footer>
+</body>
+</html>
